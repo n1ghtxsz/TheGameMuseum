@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de Perfil</title>
+    <link rel="stylesheet" href="../../styles/configuration.css">
+</head>
+<body>
+
+    <div class="profile-container">
+        <h2>Configurações do Perfil</h2>
+        
+        <div class="profile-pic-section">
+            <div class="profile-pic">
+                <img id="profileImage" src="default-profile.jpg" alt="Foto de perfil">
+            </div>
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload" class="upload-btn">Trocar Foto</label>
+        </div>
+        
+        <div class="profile-info">
+            <label for="nameInput">Nome:</label>
+            <input type="text" id="nameInput" placeholder="Digite seu nome">
+        </div>
+
+        <button class="save-btn" onclick="saveProfile()">Salvar Alterações</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
