@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="../../styles/config.css">
+    <link rel="icon" type="x/icon" href="../../assets/logo_site.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container light-style flex-grow-1 container-p-y">
+        <h4 class="font-weight-bold py-3 mb-4">
+            Configurações da conta
+        </h4>
+
+        <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                            href="#account-general">Geral</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-change-password">Alterar Senha</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-info">Informações</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-social-links">Mídia Sociais</a>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+                            <div class="card-body media align-items-center">
+                                <img id="profile-pic" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt
+                                    class="d-block ui-w-80">
+                                <div class="media-body ml-4">
+                                    <label class="btn btn-outline-primary">
+                                        Enviar a foto
+                                        <input type="file" class="account-settings-fileinput" id="upload-photo" hidden>
+                                    </label> &nbsp;
+                                    <button type="button" class="btn btn-default md-btn-flat" id="reset-pic-btn">Resetar</button>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label">Nome de usuário</label>
+                                    <input type="text" class="form-control mb-1" id="username" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="name" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">E-mail</label>
+                                    <input type="text" class="form-control mb-1" id="email" value="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Senha Atual</label>
+                                    <input type="password" class="form-control" id="current-password">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Nova Senha</label>
+                                    <input type="password" class="form-control" id="new-password">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Repita a nova senha</label>
+                                    <input type="password" class="form-control" id="confirm-password">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="account-info">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Bio</label>
+                                    <textarea class="form-control" id="bio" rows="5"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Data de aniversário</label>
+                                    <input type="text" class="form-control" id="birthdate" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">País</label>
+                                    <select class="custom-select" id="country">
+                                        <option>Estados Unidos</option>
+                                        <option selected>Brasil</option>
+                                        <option>Inglaterra</option>
+                                        <option>Alemanha</option>
+                                        <option>França</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Contato</h6>
+                                <div class="form-group">
+                                    <label class="form-label">Telefone</label>
+                                    <input type="text" class="form-control" id="phone" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Website</label>
+                                    <input type="text" class="form-control" id="website" value="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="account-social-links">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Twitter</label>
+                                    <input type="text" class="form-control" id="twitter" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Facebook</label>
+                                    <input type="text" class="form-control" id="facebook" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Bluesky</label>
+                                    <input type="text" class="form-control" id="bluesky" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">LinkedIn</label>
+                                    <input type="text" class="form-control" id="linkedin" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Instagram</label>
+                                    <input type="text" class="form-control" id="instagram" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-right mt-3">
+            <button type="button" class="btn btn-primary" id="save-btn">Save changes</button>&nbsp;
+            <a href="../index.html" type="button" class="btn btn-default">Voltar</a>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                // Função para alterar a foto do perfil
+                const profilePic = document.getElementById('profile-pic');
+                const uploadPhoto = document.getElementById('upload-photo');
+                const resetPicBtn = document.getElementById('reset-pic-btn');
+                const dropdownPic = document.getElementById('dropdown-profile-pic'); // Imagem no dropdown
+                const defaultPic = "https://bootdey.com/img/Content/avatar/avatar1.png"; // Imagem padrão
+
+                document.querySelector('.btn-outline-primary').addEventListener('click', function () {
+                    uploadPhoto.click();
+                });
+
+                uploadPhoto.addEventListener('change', function () {
+                    const file = this.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            const imgSrc = e.target.result;
+                            profilePic.src = imgSrc; // Alterar a imagem do perfil
+                            dropdownPic.src = imgSrc; // Alterar a imagem no dropdown
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+
+                resetPicBtn.addEventListener('click', function () {
+                    profilePic.src = defaultPic; // Restaurar a imagem padrão
+                    dropdownPic.src = "../assets/user_logo.png"; // Restaurar a imagem padrão no dropdown
+                });
+
+                // Função para salvar dados (apenas console log para simulação)
+                document.getElementById('save-btn').addEventListener('click', function () {
+                    const username = document.getElementById('username').value;
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const currentPassword = document.getElementById('current-password').value;
+                    const newPassword = document.getElementById('new-password').value;
+                    const confirmPassword = document.getElementById('confirm-password').value;
+                    const bio = document.getElementById('bio').value;
+                    const birthdate = document.getElementById('birthdate').value;
+                    const country = document.getElementById('country').value;
+                    const phone = document.getElementById('phone').value;
+                    const website = document.getElementById('website').value;
+                    const twitter = document.getElementById('twitter').value;
+                    const facebook = document.getElementById('facebook').value;
+                    const bluesky = document.getElementById('bluesky').value;
+                    const linkedin = document.getElementById('linkedin').value;
+                    const instagram = document.getElementById('instagram').value;
+
+                    const formData = {
+                        username,
+                        name,
+                        email,
+                        currentPassword,
+                        newPassword,
+                        bio,
+                        birthdate,
+                        country,
+                        phone,
+                        website,
+                        twitter,
+                        facebook,
+                        bluesky,
+                        linkedin,
+                        instagram
+                    };
+
+                    console.log("Dados do formulário:", formData);
+
+                    alert("Mudanças salvas com sucesso!");
+                });
+            });
+        </script>
+<script>
+    // Ao carregar a página, busca a imagem e o nome do localStorage
+    window.onload = function() {
+        const storedImage = localStorage.getItem('profileImage');
+        const storedUsername = localStorage.getItem('username');
+        
+        // Se houver uma imagem armazenada, atualiza a imagem de perfil na página de configurações
+        if (storedImage) {
+            document.querySelector('.media img').src = storedImage;
+        }
+
+        // Se houver um nome armazenado, atualiza o campo de nome de usuário
+        if (storedUsername) {
+            document.querySelector('input[type="text"]').value = storedUsername;
+        }
+    };
+
+    // Salvar nova imagem e nome no localStorage ao clicar no botão "Salvar"
+    document.querySelector('.account-settings-fileinput').addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function () {
+            const imageData = reader.result;
+            // Armazena a imagem no localStorage
+            localStorage.setItem('profileImage', imageData);
+            document.querySelector('.media img').src = imageData;  // Atualiza a imagem na visualização
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Armazena o nome do usuário no localStorage
+    document.querySelector('.btn-primary').addEventListener('click', function () {
+        const username = document.querySelector('input[type="text"]').value;
+        localStorage.setItem('username', username);
+        alert('Alterações salvas!');
+    });
+</script>
+
+    </div>
+</body>
