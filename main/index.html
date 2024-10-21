@@ -49,6 +49,11 @@
     .card:hover img {
         opacity: 0.6;
     }
+
+    .nav-link.active {
+        color: white !important;
+    }
+
     </style>
 </head>
 
@@ -66,29 +71,29 @@
                         <span class="fs-5">The Game Museum</span>
                     </a>
                     <hr>
-                    <ul class="nav nav-pills flex-column mb-auto">
+                    <ul class="nav nav-pills flex-column mb-auto" id="sidebar-menu">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href=""><img src="../assets/golden_star.png"
+                            <a class="nav-link link-body-emphasis active sidebar-link" aria-current="page" href="#popular"><img src="../assets/golden_star.png"
                                     class="bi pe-none me-2" width="16" height="16">
                                 </img> POPULAR</a>
                         </li>
                         <li>
-                            <a class="nav-link link-body-emphasis" href=""><img src="../assets/hollowknight_head.png"
+                            <a class="nav-link link-body-emphasis sidebar-link" href="#indie"><img src="../assets/hollowknight_head.png"
                                     class="bi pe-none me-2" width="16" height="16">
                                 </img> INDIE</a>
                         </li>
                         <li>
-                            <a class="nav-link link-body-emphasis" href=""><img src="../assets/play2_controller.png"
+                            <a class="nav-link link-body-emphasis sidebar-link" href="#retro"><img src="../assets/play2_controller.png"
                                     class="bi pe-none me-2" width="16" height="16">
                                 </img> RETRO</a>
                         </li>
                         <li>
-                            <a class="nav-link link-body-emphasis" href=""><img src="../assets/coin_games.png"
+                            <a class="nav-link link-body-emphasis sidebar-link" href="#gratuitos"><img src="../assets/coin_games.png"
                                     class="bi pe-none me-2" width="16" height="16">
                                 </img> GRATUITOS</a>
                         </li>
                         <li>
-                            <a class="nav-link link-body-emphasis" href=""><img src="../assets/cute_ghost.png"
+                            <a class="nav-link link-body-emphasis sidebar-link" href="#terror"><img src="../assets/cute_ghost.png"
                                     class="bi pe-none me-2" width="16" height="16">
                                 </img> TERROR</a>
                         </li>
@@ -133,7 +138,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                                <a class="nav-link" aria-current="page" href="#">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="sub-main/catalog.html">Catálogo</a>
@@ -280,8 +285,8 @@
                 </div>
             </div>
             <main class="row">
-                <h1 class="text-start fs-2 shadow bg-primary text-light border border-light" style="margin-left: 290px; margin-top: 150px; text-indent: 100px;">Jogos Populares</h1>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 164vh;">
+                <h1 id="popular" class="text-start fs-2 shadow bg-primary text-light border border-light section" style="margin-left: 290px; margin-top: 150px; text-indent: 100px; width: 165vh;">Jogos Populares</h1>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../assets/eldenring.jpg" class="card-img-top">
                         <div class="card-body">
@@ -303,17 +308,17 @@
                         <div class="card-body">
                             <h5 class="card-title">Grand Thief Auto V</h5>
                             <p class="card-text"></p>
-                            <a href="#" class="btn btn-primary">Saiba Mais</a>
+                            <a href="sub-main/templates/gta5.html" class="btn btn-primary">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 164vh;">
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../assets/dragonballzsparkingzero.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">DBZ: Sparkin Zero</h5>
                             <p class="card-text"></p>
-                            <a href="#" class="btn btn-primary">Saiba Mais</a>
+                            <a href="sub-main/templates/dbzsparkinzero.html" class="btn btn-primary">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
@@ -329,12 +334,119 @@
                         <div class="card-body">
                             <h5 class="card-title">Lethal Company</h5>
                             <p class="card-text"></p>
-                            <a href="#" class="btn btn-primary">Saiba Mais</a>
+                            <a href="sub-main/templates/lethalcompany.html" class="btn btn-primary">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
-                <p style="margin-left: 290px; margin-top: 100px; text-indent: 25px;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
-                <h1 class="text-start fs-2 shadow bg-primary text-light border border-light" style="margin-left: 290px; text-indent: 100px;">Jogos Indie</h1>
+                <p style="margin-left: 290px; margin-top: 100px; text-indent: 25px; width: 164vh;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
+                <h1 id="indie" class="text-start fs-2 shadow bg-primary text-light border border-light section" style="margin-left: 290px; text-indent: 100px; width: 165vh;">Jogos Indie</h1>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/hollowknight.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Hollow Knight</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/hollowknight.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/celeste.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Celeste</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/celeste.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
+                        <img src="../assets/undertale.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Undertale</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/undertale.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/hades.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Hades</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/hades.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/deadcells.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Dead Cells</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/deadcells.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
+                        <img src="../assets/oriandtheblindforest.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Ori and the blind Forest</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/oriandtheblindforest.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-left: 290px; margin-top: 100px; text-indent: 25px; width: 164vh;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
+                <h1 id="retro" class="text-start fs-2 shadow bg-primary text-light border border-light section" style="margin-left: 290px; text-indent: 100px; width: 165vh;">Jogos Retro</h1>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/sonicthehedgehog.jpeg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Sonic the Hedgehog</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/hades.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/supermarioworld.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Super Mario World</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/deadcells.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
+                        <img src="../assets/supermetroid.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Super Metroid</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/oriandtheblindforest.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/megamanx.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Mega Man X</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/hades.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/finalfantasyvii.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Final Fantasy VII</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/deadcells.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
+                        <img src="../assets/streetfighter.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Street Fighter II</h5>
+                            <p class="card-text"></p>
+                            <a href="sub-main/templates/oriandtheblindforest.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-left: 290px; margin-top: 100px; text-indent: 25px; width: 164vh;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
             </main>
         </div>
     </div>
@@ -355,6 +467,57 @@
         document.querySelector('.dropdown-toggle').innerHTML = `<img src="${profileImage || '../assets/user_logo.png'}" class="bi pe-none me-2" width="32" height="32"> ${username}`;
     }
 
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const sidebarLinks = document.querySelectorAll(".sidebar-link");
+
+    sidebarLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Obtém o ID da seção com base no href do link
+            const sectionId = this.getAttribute("href");
+            const section = document.querySelector(sectionId);
+
+            // Faz a rolagem suave até a seção correspondente
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+                });
+            });
+        });
+    });
+
+    document.querySelectorAll('#sidebar-menu .nav-link').forEach(item => {
+    item.addEventListener('click', function() {
+        // Remove a classe 'active' de todos os links
+        document.querySelectorAll('#sidebar-menu .nav-link').forEach(link => {
+            link.classList.remove('active');
+        });
+        // Adiciona a classe 'active' ao link clicado
+        this.classList.add('active');
+    });
+});
+
+// Função para marcar o botão da sidebar com base no hash (#) da URL
+function setActiveSidebarLink() {
+    const hash = window.location.hash; // Obtém a âncora da URL (ex: '#popular-section')
+    const sidebarLinks = document.querySelectorAll('#sidebar-menu .nav-link');
+
+    // Se não houver hash, seleciona o primeiro item (POPULAR) por padrão
+    if (!hash) {
+        sidebarLinks[0].classList.add('active');
+    }
+
+    // Verifica cada link da sidebar e compara com o hash atual
+    sidebarLinks.forEach(link => {
+        if (link.getAttribute('href') === hash) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
 
     </script>
 </body>
