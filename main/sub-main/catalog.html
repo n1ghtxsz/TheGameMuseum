@@ -407,23 +407,47 @@
                         </div>
                     </div>
                 </div>
+                <h1 id="gratuitos" class="text-start fs-2 shadow bg-primary text-light border border-light" style="margin-left: 290px; text-indent: 100px; margin-top: 100px; width: 165vh;">Jogos Gratuitos</h1>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../../assets/megamanx.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Mega Man X</h5>
+                            <p class="card-text"></p>
+                            <a href="templates/limbo.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../../assets/megamanx.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Mega Man X</h5>
+                            <p class="card-text"></p>
+                            <a href="templates/inside.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
+                        <img src="../../assets/streetfighter.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Street Fighter II</h5>
+                            <p class="card-text"></p>
+                            <a href="templates/shovelknight.html" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
     <script src="../../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script>
 
-    // Verifica se há uma imagem de perfil armazenada
     const profileImage = localStorage.getItem('profileImage');
     const username = localStorage.getItem('username');
 
     if (profileImage) {
-        // Atualiza a imagem do dropdown
         document.querySelector('.dropdown img').src = profileImage;
     }
 
     if (username) {
-        // Atualiza o nome no dropdown
         document.querySelector('.dropdown-toggle').innerHTML = `<img src="${profileImage || '../assets/user_logo.png'}" class="bi pe-none me-2" width="32" height="32"> ${username}`;
     }
 
@@ -434,11 +458,9 @@
         link.addEventListener("click", function (e) {
             e.preventDefault();
 
-            // Obtém o ID da seção com base no href do link
             const sectionId = this.getAttribute("href");
             const section = document.querySelector(sectionId);
 
-            // Faz a rolagem suave até a seção correspondente
             section.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
@@ -449,26 +471,21 @@
 
     document.querySelectorAll('#sidebar-menu .nav-link').forEach(item => {
     item.addEventListener('click', function() {
-        // Remove a classe 'active' de todos os links
         document.querySelectorAll('#sidebar-menu .nav-link').forEach(link => {
             link.classList.remove('active');
         });
-        // Adiciona a classe 'active' ao link clicado
         this.classList.add('active');
     });
 });
 
-// Função para marcar o botão da sidebar com base no hash (#) da URL
 function setActiveSidebarLink() {
-    const hash = window.location.hash; // Obtém a âncora da URL (ex: '#popular-section')
+    const hash = window.location.hash;
     const sidebarLinks = document.querySelectorAll('#sidebar-menu .nav-link');
 
-    // Se não houver hash, seleciona o primeiro item (POPULAR) por padrão
     if (!hash) {
         sidebarLinks[0].classList.add('active');
     }
 
-    // Verifica cada link da sidebar e compara com o hash atual
     sidebarLinks.forEach(link => {
         if (link.getAttribute('href') === hash) {
             link.classList.add('active');
