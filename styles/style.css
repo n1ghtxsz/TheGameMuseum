@@ -8,6 +8,10 @@
     transform: translateY(-5px);
 }
 
+.d-none-mobile {
+    display: none;
+}
+
 
 /* .card:hover {
     transform: translateY(20px);

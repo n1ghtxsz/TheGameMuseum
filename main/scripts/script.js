@@ -12,3 +12,15 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         alert('Usuário ou senha incorretos. Tente novamente.');
     }
 });
+
+document.getElementById('loginForm_mobile').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    
+    const username = document.getElementById('username_mobile').value;
+    const password = document.getElementById('password_mobile').value;
+
+    if (username === 'admin' && password === '123') {
+        window.location.href = '../index.html';
+    } 
+});
+

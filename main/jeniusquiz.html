@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="icon" type="x/icon" href="../assets/logo_site.png">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>The Game Museum</title>
+    <style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .fixado {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        z-index: 1000;
+    }
+
+    .card {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card:hover {
+        background-color: rgb(82, 78, 78);
+        cursor: pointer;
+    }
+
+    .card-body h5 {
+        color: black;
+        transition: color 0.3s ease;
+    }
+
+    .card:hover .card-body h5 {
+        color: white;
+    }
+
+    .card img {
+        transition: opacity 0.3s ease;
+    }   
+
+    .card:hover img {
+        opacity: 0.6;
+    }
+
+    .nav-link.active {
+        color: white !important;
+    }
+
+    #resultado-pesquisa {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }   
+
+    .resultado-item {
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .resultado-item:last-child {
+        border-bottom: none;
+    }
+    </style>
+</head>
+
+<body id="fds">
+    <div id="site-pc">
+        <div id="navigation_container" class="d-block">
+            <div id="sidebar" class="border border-light shadow-lg bg fixado"
+                style="width: 290px; height: 961px; background-color: #fff;">
+                <div id="container" class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary"
+                    style="width: 280px; height: 951px;">
+                    <a
+                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                        <img class="bi pe-none me-2" src="../assets/logo_site.png" width="46" height="28">
+                        </img>
+                        <span class="fs-5">The Game Museum</span>
+                    </a>
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto" id="sidebar-menu">
+                        <li class="nav-item">
+                            <a class="nav-link link-body-emphasis active sidebar-link" aria-current="page" href="#popular"><img src="../assets/golden_star.png"
+                                    class="bi pe-none me-2" width="16" height="16">
+                                </img> POPULAR</a>
+                        </li>
+                        <li>
+                            <a class="nav-link link-body-emphasis sidebar-link" href="#indie"><img src="../assets/hollowknight_head.png"
+                                    class="bi pe-none me-2" width="16" height="16">
+                                </img> INDIE</a>
+                        </li>
+                        <li>
+                            <a class="nav-link link-body-emphasis sidebar-link" href="#retro"><img src="../assets/play2_controller.png"
+                                    class="bi pe-none me-2" width="16" height="16">
+                                </img> RETRO</a>
+                        </li>
+                        <li>
+                            <a class="nav-link link-body-emphasis sidebar-link" href="#gratuitos"><img src="../assets/coin_games.png"
+                                    class="bi pe-none me-2" width="16" height="16">
+                                </img> GRATUITOS</a>
+                        </li>
+                        <li>
+                            <a class="nav-link link-body-emphasis sidebar-link" href="#terror"><img src="../assets/cute_ghost.png"
+                                    class="bi pe-none me-2" width="16" height="16">
+                                </img> TERROR</a>
+                        </li>
+                    </ul>
+                    <div class="grid gap-3">
+                        <a href="https://bsky.app/profile/nightxsz.bsky.social" target="_blank"><img class="p-1 animationsocial" src="../assets/blueskylogo.png" width="44"></a>
+                        <a href="https://www.instagram.com/siqueira.luisf/" target="_blank"><img class="p-1 animationsocial" src="../assets/instagramlogo.png" width="44"></a>
+                        <a href="https://github.com/n1ghtxsz" target="_blank"><img class="p-1 animationsocial" src="../assets/githublogo.png" width="44"></a>
+                        <a href="https://www.twitch.tv/nightxsz" target="_blank"><img class="p-1 animationsocial" src="../assets/twitch.png" width="44"></a>
+                        <a href="https://www.x.com/LOWER_nightxsz" target="_blank"><img class="p-1 animationsocial" src="../assets/twitter.png" width="44"></a>
+                    </div>
+                    <hr>
+                    <div class="dropdown">
+                        <a href="#"
+                            class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+                            data-bs-toggle="dropdown" aria-expanded="false"><img src="../assets/user_logo.png"
+                                class="bi pe-none me-2" width="32" height="32"> Admin</a>
+                        <ul class="dropdown-menu text-small shadow"
+                            style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -34px);"
+                            data-popper-placement="top-start">
+                            <li>
+                                <a class="dropdown-item" href="sub-main/config.html">Configurações</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="login/login.html">Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg fixado" style="margin-left: 290px; width: 164vh;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navegar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sub-main/catalog.html">Catálogo</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Extras
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" target="_blank"
+                                            href="#">Jenius Quiz</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Sobre</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search" id="pesquisar">
+                            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                            <div id="resultado-pesquisa" class="mt-3"></div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <div style="margin-left: 290px; margin-top: 56px;">
+                <div class="mt-5" style="text-indent: 30px;">
+                    <h1>O que é Jenius Quiz?</h1>
+                    <br>
+                    <p>Jenius Quiz é um jogo de quiz com 4 respostas e 50 perguntas, a cada pergunta a difilculdade das perguntas podem aumentar e caso você aperte a resposta errada você terá que refazer tudo denovo!.</p>
+                    <h1>Curiosidades</h1>
+                    <br>
+                    <p>Jogo desenvolvido pela <strong>@newtralstudios</strong> e lançado inicialmente em 05 de setembro de 2024 a fins de entretenimento e experiência!.</p>
+                    <br>
+                </div>
+                <section class="shadow-lg mx-auto border border-1 border-light mt-2 bg-light" style="width: 400px; height: 810px;">
+                    <a id="fullscreen-button" style="cursor: pointer;" onclick="toggleIframeFullscreen()">
+                        <box-icon name='fullscreen'></box-icon>
+                    </a>
+                    <iframe id="gameFrame" src="https://jenius-quiz.vercel.app" width="400" height="800" frameborder="0"></iframe>
+                </section>             
+            </div>
+        </main>
+    </div>
+    <div id="site-mobile">
+        <main>
+            <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary border border-light shadow-lg bg fixado" style="width: 4.5rem;">
+                <a href="#" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                    <img src="../assets/logo_site.png" class="bi pe-none" width="40" height="32">
+                </a>
+                <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                    <li class="nav-item">
+                        <a href="#popular" class="nav-link active py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                            <img src="../assets/golden_star.png" class="bi pe-none" width="24" height="24" role="img" aria-label="Home">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#indie" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                            <img src="../assets/hollowknight_head.png" class="bi pe-none" width="24" height="24" role="img" aria-label="Dashboard">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#retro" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                            <img src="../assets/play2_controller.png" class="bi pe-none" width="24" height="24" role="img" aria-label="Orders">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#gratuitos" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                            <img src="../assets/coin_games.png" class="bi pe-none" width="24" height="24" role="img" aria-label="Products">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#terror" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
+                            <img src="../assets/cute_ghost.png" class="bi pe-none" width="24" height="24" role="img" aria-label="Customers">
+                        </a>
+                    </li>
+                </ul>
+                <div class="dropdown border-top">
+                    <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../assets/user_logo.png" alt="mdo" width="24" height="24" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small shadow">
+                        <li>
+                            <a href="sub-main/config.html" class="dropdown-item">Configurações</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a href="login/login.html" class="dropdown-item">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg fixado" style="margin-left: 70px; width: 25vh;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navegar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sub-main/catalog.html">Catálogo</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Extras
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" target="_blank"
+                                            href="https://jenius-quiz.vercel.app">Jenius Quiz</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Sobre</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </main>
+    </div>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="teste.js"></script>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+    const profileImage = localStorage.getItem('profileImage');
+    const username = localStorage.getItem('username');
+
+    if (profileImage) {
+        document.querySelector('.dropdown img').src = profileImage;
+    }
+
+    if (username) {
+        document.querySelector('.dropdown-toggle').innerHTML = `<img src="${profileImage || '../assets/user_logo.png'}" class="bi pe-none me-2" width="32" height="32"> ${username}`;
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const sidebarLinks = document.querySelectorAll(".sidebar-link");
+
+    sidebarLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const sectionId = this.getAttribute("href");
+            const section = document.querySelector(sectionId);
+
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+                });
+            });
+        });
+    });
+
+    document.querySelectorAll('#sidebar-menu .nav-link').forEach(item => {
+    item.addEventListener('click', function() {
+        document.querySelectorAll('#sidebar-menu .nav-link').forEach(link => {
+            link.classList.remove('active');
+        });
+        this.classList.add('active');
+    });
+});
+
+function setActiveSidebarLink() {
+    const hash = window.location.hash;
+    const sidebarLinks = document.querySelectorAll('#sidebar-menu .nav-link');
+
+    if (!hash) {
+        sidebarLinks[0].classList.add('active');
+    }
+
+    sidebarLinks.forEach(link => {
+        if (link.getAttribute('href') === hash) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+    function selectGame(gameId) {
+        localStorage.setItem('selectedGame', gameId);
+        window.location.href = 'sub-main/templates/template.html';
+    }
+
+    document.getElementById("pesquisar").addEventListener("submit", function(event) {
+    event.preventDefault(); // Previne o reload da página ao submeter o formulário
+
+    const termoPesquisa = document.querySelector("#pesquisar input[type='search']").value.toLowerCase();
+    const jogos = document.querySelectorAll(".card");
+    const resultadoContainer = document.getElementById("resultado-pesquisa");
+
+    // Limpa o conteúdo anterior do resultado da pesquisa
+    resultadoContainer.innerHTML = "";
+
+    let encontrouResultado = false; // Variável para indicar se um jogo foi encontrado
+
+    jogos.forEach(jogo => {
+        if (encontrouResultado) return; // Interrompe a busca após encontrar o primeiro resultado
+
+        const tituloJogo = jogo.querySelector(".card-title").textContent.toLowerCase();
+
+        if (tituloJogo.includes(termoPesquisa)) {
+            // Cria um elemento de resultado com imagem e nome do jogo
+            const jogoResultado = document.createElement("div");
+            jogoResultado.classList.add("resultado-item");
+            jogoResultado.style.display = "flex";
+            jogoResultado.style.alignItems = "center";
+            jogoResultado.style.marginBottom = "10px";
+
+            // Imagem do jogo
+            const imagemJogo = jogo.querySelector("img").cloneNode(true);
+            imagemJogo.style.width = "50px";
+            imagemJogo.style.height = "50px";
+            imagemJogo.style.marginRight = "10px";
+            jogoResultado.appendChild(imagemJogo);
+
+            // Nome do jogo
+            const nomeJogo = document.createElement("span");
+            nomeJogo.textContent = jogo.querySelector(".card-title").textContent;
+            jogoResultado.appendChild(nomeJogo);
+
+            // Adiciona o resultado ao contêiner de resultados
+            resultadoContainer.appendChild(jogoResultado);
+
+            encontrouResultado = true; // Define como verdadeiro para indicar que um resultado foi encontrado
+        }
+    });
+
+    // Exibe mensagem se nenhum jogo for encontrado
+    if (!encontrouResultado) {
+        resultadoContainer.innerHTML = "<p>Nenhum jogo encontrado.</p>";
+    }
+});
+
+
+    </script>
+</body>
+
+</html>

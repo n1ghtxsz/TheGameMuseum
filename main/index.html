@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
     <link rel="icon" type="x/icon" href="../assets/logo_site.png">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
     <title>The Game Museum</title>
     <style>
     body {
@@ -19,7 +20,6 @@
         width: 100%;
         background-color: #333;
         color: white;
-
         z-index: 1000;
     }
 
@@ -54,11 +54,28 @@
         color: white !important;
     }
 
+    #resultado-pesquisa {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }   
+
+    .resultado-item {
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .resultado-item:last-child {
+        border-bottom: none;
+    }
+
+
     </style>
 </head>
 
 <body>
-    <div>
+    <div id="site-pc">
         <div id="navigation_container" class="d-block">
             <div id="sidebar" class="border border-light shadow-lg bg fixado"
                 style="width: 290px; height: 961px; background-color: #fff;">
@@ -150,7 +167,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" target="_blank"
-                                            href="https://jenius-quiz.vercel.app">Jenius Quiz</a></li>
+                                            href="jeniusquiz.html">Jenius Quiz</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -158,9 +175,10 @@
                                 </ul>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
+                        <form class="d-flex" role="search" id="pesquisar">
                             <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                            <div id="resultado-pesquisa" class="mt-3"></div>
                         </form>
                     </div>
                 </div>
@@ -185,19 +203,29 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../assets/thelastofus.jpeg" class="d-block w-100">
+                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwioqPmuu56JAxXwLbkGHfcBOmoQFnoECAgQAQ&url=https%3A%2F%2Fstore.steampowered.com%2Fapp%2F1888930%2FThe_Last_of_Us_Part_I%2F&usg=AOvVaw1jQVr7h2mamNUPEY4-KwOI&opi=89978449" target="_blank">
+                                    <img src="../assets/thelastofus.jpeg" class="d-block w-100">
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/godofwarragnarok.jpg" class="d-block w-100">
+                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwie7Mmku56JAxUBO7kGHa-JEdcQFnoECAkQAQ&url=https%3A%2F%2Fstore.steampowered.com%2Fapp%2F2322010%2FGod_of_War_Ragnark%2F&usg=AOvVaw2_wIimaEOtmF214VijzErU&opi=89978449" target="_blank">
+                                    <img src="../assets/godofwarragnarok.jpg" class="d-block w-100">
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/blackmythwukong.jpg" class="d-block w-100">
+                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiX9tWIup6JAxX-E7kGHSlFMPIQFnoECAkQAQ&url=https%3A%2F%2Fstore.steampowered.com%2Fapp%2F2358720%2FBlack_Myth_Wukong%2F&usg=AOvVaw3SiQe2kMvkWRjw6OfPiuTo&opi=89978449" target="_blank">
+                                    <img src="../assets/blackmythwukong.jpg" class="d-block w-100">
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/cyberpunk.jpg" class="d-block w-100">
+                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjuqe2c162JAxU9rJUCHefDDO0QFnoECAsQAQ&url=https%3A%2F%2Fstore.steampowered.com%2Fapp%2F1091500%2FCyberpunk_2077%2F&usg=AOvVaw1ons0iXdZQo1w65Ll_9TyN&opi=89978449" target="_blank">
+                                    <img src="../assets/cyberpunk.jpg" class="d-block w-100">
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="../assets/silenthill2.jpg" class="d-block w-100">
+                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjpxM7IgKaJAxXcLrkGHXzfAKsQFnoECAkQAQ&url=https%3A%2F%2Fstore.steampowered.com%2Fapp%2F2124490%2FSILENT_HILL_2%2F&usg=AOvVaw1uyIpktX_kZVKn_UALAzcV&opi=89978449" target="_blank">
+                                    <img src="../assets/silenthill2.jpg" class="d-block w-100">
+                                </a>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
@@ -292,7 +320,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Elden Ring</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/eldenring.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('eldenring')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
@@ -300,7 +328,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Black Myth Wukong</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/blackmythwukong.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('blackmythwukong')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
@@ -308,7 +336,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Grand Thief Auto V</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/gta5.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('gta5')">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
@@ -318,7 +346,7 @@
                         <div class="card-body">
                             <h5 class="card-title">DBZ: Sparkin Zero</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/dbzsparkinzero.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('dbzsparkinzero')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
@@ -326,7 +354,7 @@
                         <div class="card-body">
                             <h5 class="card-title">DayZ</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/dayz.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('dayz')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
@@ -334,7 +362,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Lethal Company</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/lethalcompany.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('lethalcompany')" >Saiba Mais</a>
                         </div>
                     </div>
                 </div>
@@ -346,7 +374,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Hollow Knight</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/hollowknight.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('hollowknight')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
@@ -354,7 +382,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Celeste</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/celeste.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('celeste')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
@@ -362,7 +390,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Undertale</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/undertale.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('undertale')">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
@@ -372,7 +400,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Hades</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/hades.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('hades')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
@@ -380,7 +408,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Dead Cells</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/deadcells.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('deadcells')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
@@ -388,7 +416,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Ori and the blind Forest</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/oriandtheblindforest.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('oriandtheblindforest')">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
@@ -400,7 +428,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Sonic the Hedgehog</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/hades.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('sonic')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
@@ -408,7 +436,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Super Mario World</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/deadcells.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('supermarioworld')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
@@ -416,7 +444,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Super Metroid</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/oriandtheblindforest.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('supermetroid')">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
@@ -426,7 +454,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Mega Man X</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/hades.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('megamanx')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
@@ -434,7 +462,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Final Fantasy VII</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/deadcells.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('finalfantasyvii')">Saiba Mais</a>
                         </div>
                     </div>
                     <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
@@ -442,14 +470,610 @@
                         <div class="card-body">
                             <h5 class="card-title">Street Fighter II</h5>
                             <p class="card-text"></p>
-                            <a href="sub-main/templates/oriandtheblindforest.html" class="btn btn-primary">Saiba Mais</a>
+                            <a class="btn btn-primary" onclick="selectGame('streetfighter')">Saiba Mais</a>
                         </div>
                     </div>
                 </div>
                 <p style="margin-left: 290px; margin-top: 100px; text-indent: 25px; width: 164vh;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
                 <h1 id="gratuitos" class="text-start fs-2 shadow bg-primary text-light border border-light section" style="margin-left: 290px; text-indent: 100px; width: 165vh;">Jogos Gratuitos</h1>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/throneandliberty.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Throne And Liberty</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('throneandliberty')">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/supermarkettogether.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Supermarket Together</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('supermarkettogether')">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
+                        <img src="../assets/oncehuman.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Once Human</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('oncehuman')">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/thefinals.jpeg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">The Finals</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('thefinals')">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/thesims4.jpeg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">The Sims 4</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('thesims4')">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
+                        <img src="../assets/overwatch2.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Overwatch 2</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('overwatch2')">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-left: 290px; margin-top: 100px; text-indent: 25px; width: 164vh;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
+                <h1 id="terror" class="text-start fs-2 shadow bg-primary text-light border border-light section" style="margin-left: 290px; text-indent: 100px; width: 165vh;">Jogos de Terror</h1>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/pacify.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Pacify</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('pacify')">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/devour.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Devour</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('devour')">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
+                        <img src="../assets/demonologist.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Demonologist</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('demonologist')">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>                
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/phasmophobia.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Phasmophobia</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('phasmophobia')">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
+                        <img src="../assets/escapethebackrooms.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Escape The Backrooms</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('escapethebackrooms')">Saiba Mais</a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm m-2 animationsocial pointer" style="width: 18rem;">
+                        <img src="../assets/fearstofathom.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Fears to Fathom: Iron Bark</h5>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" onclick="selectGame('fearstofathom')">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-left: 290px; margin-top: 100px; text-indent: 25px; width: 164vh;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
+                <p style="margin-left: 290px; text-indent: 25px; width: 164vh;">Você chegou ao fim da sessão</p>
             </main>
         </div>
+    </div>
+    <div id="site-mobile">
+        <main>
+            <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary border border-light shadow-lg bg fixado" style="width: 4.5rem;">
+                <a href="#" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                    <img src="../assets/logo_site.png" class="bi pe-none" width="40" height="32">
+                </a>
+                <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                    <li class="nav-item">
+                        <a href="#popular" class="nav-link active py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                            <img src="../assets/golden_star.png" class="bi pe-none" width="24" height="24" role="img" aria-label="Home">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#indie" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                            <img src="../assets/hollowknight_head.png" class="bi pe-none" width="24" height="24" role="img" aria-label="Dashboard">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#retro" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                            <img src="../assets/play2_controller.png" class="bi pe-none" width="24" height="24" role="img" aria-label="Orders">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#gratuitos" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                            <img src="../assets/coin_games.png" class="bi pe-none" width="24" height="24" role="img" aria-label="Products">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#terror" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
+                            <img src="../assets/cute_ghost.png" class="bi pe-none" width="24" height="24" role="img" aria-label="Customers">
+                        </a>
+                    </li>
+                </ul>
+                <div class="dropdown border-top">
+                    <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../assets/user_logo.png" alt="mdo" width="24" height="24" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small shadow">
+                        <li>
+                            <a href="sub-main/config.html" class="dropdown-item">Configurações</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a href="login/login.html" class="dropdown-item">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg fixado" style="margin-left: 70px; width: 25vh;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navegar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sub-main/catalog.html">Catálogo</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Extras
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" target="_blank"
+                                            href="jeniusquiz.html">Jenius Quiz</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Sobre</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <div style="margin-top: 70px; margin-left: 70px;">
+                <h1 class="text-center mt-4 fs-2">Jogos que Merecem sua Atenção</h1>
+                <hr>
+                <div id="carouselExampleRide" class="carousel slide box-shadow mt-4 mx-auto"
+                    style="width: 250px; box-shadow: 5px 5px 5px darkgrey;" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwioqPmuu56JAxXwLbkGHfcBOmoQFnoECAgQAQ&url=https%3A%2F%2Fstore.steampowered.com%2Fapp%2F1888930%2FThe_Last_of_Us_Part_I%2F&usg=AOvVaw1jQVr7h2mamNUPEY4-KwOI&opi=89978449" target="_blank">
+                                <img src="../assets/thelastofus.jpeg" class="d-block w-100">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwie7Mmku56JAxUBO7kGHa-JEdcQFnoECAkQAQ&url=https%3A%2F%2Fstore.steampowered.com%2Fapp%2F2322010%2FGod_of_War_Ragnark%2F&usg=AOvVaw2_wIimaEOtmF214VijzErU&opi=89978449" target="_blank">
+                                <img src="../assets/godofwarragnarok.jpg" class="d-block w-100">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiX9tWIup6JAxX-E7kGHSlFMPIQFnoECAkQAQ&url=https%3A%2F%2Fstore.steampowered.com%2Fapp%2F2358720%2FBlack_Myth_Wukong%2F&usg=AOvVaw3SiQe2kMvkWRjw6OfPiuTo&opi=89978449" target="_blank">
+                                <img src="../assets/blackmythwukong.jpg" class="d-block w-100">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjuqe2c162JAxU9rJUCHefDDO0QFnoECAsQAQ&url=https%3A%2F%2Fstore.steampowered.com%2Fapp%2F1091500%2FCyberpunk_2077%2F&usg=AOvVaw1ons0iXdZQo1w65Ll_9TyN&opi=89978449" target="_blank">
+                                <img src="../assets/cyberpunk.jpg" class="d-block w-100">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjpxM7IgKaJAxXcLrkGHXzfAKsQFnoECAkQAQ&url=https%3A%2F%2Fstore.steampowered.com%2Fapp%2F2124490%2FSILENT_HILL_2%2F&usg=AOvVaw1uyIpktX_kZVKn_UALAzcV&opi=89978449" target="_blank">
+                                <img src="../assets/silenthill2.jpg" class="d-block w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div style="margin-top: 15px; margin-left: 70px;">
+                <h1 class="text-center mt-2 fs-2">Jogos em Promoção</h1>
+                <hr>
+                <div id="carouselExampleCaptions" class="carousel slide box-shadow mt-4 mx-auto"
+                    style="width: 250px; box-shadow: 5px 5px 5px darkgrey;">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../assets/stardewvalley.jpg" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Stardew Valley</h5>
+                                <h2 class="fs-4">50% OFF</h2>
+                                <p>R$:12,49</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/thesurvivalist.jpg" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>The Survivalist</h5>
+                                <h2 class="fs-4">90% OFF</h2>
+                                <p>R$:13,99</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/assasinscreedvalhalla.jpg" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Assasins's Creed Valhalla</h5>
+                                <h2 class="fs-4">75% OFF</h2>
+                                <p>R$:49,99</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/detroitbecomehuman.jpg" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Detroit: Become Human</h5>
+                                <h2 class="fs-4">70% OFF</h2>
+                                <p>R$:35,99</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/riseoftombraider.jpg" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Rise of Tomb Raider</h5>
+                                <h2 class="fs-4">75% OFF</h2>
+                                <p>R$:10,37</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <h1 id="popular" class="text-center fs-2 shadow bg-primary text-light border border-light section" style="margin-top: 75px;">Jogos Populares</h1>
+            <div class="mt-5 p-3" style="margin-left: 70px;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../assets/eldenring.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Elden Ring</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('eldenring')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/blackmythwukong.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Black Myth Wukong</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('blackmythwukong')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/gta5.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Grand Thief Auto V</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('gta5')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="margin-left: 70px;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../assets/dragonballzsparkingzero.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">DBZ: Sparkin Zero</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('dbzsparkinzero')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/dayz.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">DayZ</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('dayz')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/lethalcompany.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Lethal Company</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('lethalcompany')" >Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-left: 70px; margin-top: 30px; text-indent: 10px;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
+            <h1 id="indie" class="text-center fs-2 shadow bg-primary text-light border border-light section">Jogos Indie</h1>
+            <div class="mt-5 p-3" style="margin-left: 70px;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../assets/hollowknight.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Hollow Knight</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('hollowknight')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/celeste.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Celeste</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('celeste')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/undertale.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Undertale</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('undertale')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="margin-left: 70px;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../assets/hades.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Hades</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('hades')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/deadcells.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Dead Cells</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('deadcells')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/oriandtheblindforest.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Ori and the blind Forest</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('oriandtheblindforest')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-left: 70px; margin-top: 30px; text-indent: 10px;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
+            <h1 id="retro" class="text-center fs-2 shadow bg-primary text-light border border-light section">Jogos Retro</h1>
+            <div class="mt-5 p-3" style="margin-left: 70px;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../assets/sonicthehedgehog.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Sonic the Hedgehog</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('sonic')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/supermarioworld.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Super Mario World</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('supermarioworld')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/supermetroid.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Super Metroid</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('supermetroid')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="margin-left: 70px;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../assets/megamanx.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Mega Man X</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('megamanx')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/finalfantasyvii.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Final Fantasy VII</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('finalfantasyvii')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/streetfighter.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Street Fighter II</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('streetfighter')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-left: 70px; margin-top: 30px; text-indent: 10px;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
+            <h1 id="gratuitos" class="text-center fs-2 shadow bg-primary text-light border border-light section">Jogos Gratuitos</h1>
+            <div class="mt-5 p-3" style="margin-left: 70px;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../assets/throneandliberty.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Throne And Liberty</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('throneandliberty')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/supermarkettogether.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Supermarket Together</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('supermarkettogether')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/oncehuman.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Once Human</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('oncehuman')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="margin-left: 70px;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../assets/thefinals.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">The Finals</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('thefinals')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/thesims4.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">The Sims 4</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('thesims4')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/overwatch2.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Overwatch 2</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('overwatch2')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-left: 70px; margin-top: 30px; text-indent: 10px;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
+            <h1 id="terror" class="text-center fs-2 shadow bg-primary text-light border border-light section">Jogos de Terror</h1>
+            <div class="mt-5 p-3" style="margin-left: 70px;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../assets/pacify.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Pacify</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('pacify')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/devour.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Devour</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('devour')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/demonologist.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Demonologist</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('demonologist')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>                
+            <div class="p-3" style="margin-left: 70px;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../assets/phasmophobia.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Phasmophobia</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('phasmophobia')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/escapethebackrooms.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Escape The Backrooms</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('escapethebackrooms')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto mt-4" style="width: 18rem;">
+                    <img src="../assets/fearstofathom.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Fears to Fathom: Iron Bark</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('fearstofathom')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-left: 70px; margin-top: 30px; text-indent: 10px;">Deseja ver mais. Vá para o <a href="sub-main/catalog.html">Catálogo</a></p>
+            <p style="margin-left: 70px; text-indent: 10px;">Você chegou ao fim da sessão</p>
+        </main>
     </div>
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -509,6 +1133,62 @@ function setActiveSidebarLink() {
         }
     });
 }
+
+    function selectGame(gameId) {
+        localStorage.setItem('selectedGame', gameId);
+        window.location.href = 'sub-main/templates/template.html';
+    }
+
+    document.getElementById("pesquisar").addEventListener("submit", function(event) {
+    event.preventDefault(); // Previne o reload da página ao submeter o formulário
+
+    const termoPesquisa = document.querySelector("#pesquisar input[type='search']").value.toLowerCase();
+    const jogos = document.querySelectorAll(".card");
+    const resultadoContainer = document.getElementById("resultado-pesquisa");
+
+    // Limpa o conteúdo anterior do resultado da pesquisa
+    resultadoContainer.innerHTML = "";
+
+    let encontrouResultado = false; // Variável para indicar se um jogo foi encontrado
+
+    jogos.forEach(jogo => {
+        if (encontrouResultado) return; // Interrompe a busca após encontrar o primeiro resultado
+
+        const tituloJogo = jogo.querySelector(".card-title").textContent.toLowerCase();
+
+        if (tituloJogo.includes(termoPesquisa)) {
+            // Cria um elemento de resultado com imagem e nome do jogo
+            const jogoResultado = document.createElement("div");
+            jogoResultado.classList.add("resultado-item");
+            jogoResultado.style.display = "flex";
+            jogoResultado.style.alignItems = "center";
+            jogoResultado.style.marginBottom = "10px";
+
+            // Imagem do jogo
+            const imagemJogo = jogo.querySelector("img").cloneNode(true);
+            imagemJogo.style.width = "50px";
+            imagemJogo.style.height = "50px";
+            imagemJogo.style.marginRight = "10px";
+            jogoResultado.appendChild(imagemJogo);
+
+            // Nome do jogo
+            const nomeJogo = document.createElement("span");
+            nomeJogo.textContent = jogo.querySelector(".card-title").textContent;
+            jogoResultado.appendChild(nomeJogo);
+
+            // Adiciona o resultado ao contêiner de resultados
+            resultadoContainer.appendChild(jogoResultado);
+
+            encontrouResultado = true; // Define como verdadeiro para indicar que um resultado foi encontrado
+        }
+    });
+
+    // Exibe mensagem se nenhum jogo for encontrado
+    if (!encontrouResultado) {
+        resultadoContainer.innerHTML = "<p>Nenhum jogo encontrado.</p>";
+    }
+});
+
 
     </script>
 </body>

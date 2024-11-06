@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    #site-pc  {
+        display: none;
+    }
+
+    #site-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    #site-pc {
+        display: block;
+    }
+
+    #site-mobile {
+        display: none;
+    }
+}
