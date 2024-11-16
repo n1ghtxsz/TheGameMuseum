@@ -54,22 +54,6 @@
     .nav-link.active {
         color: white !important;
     }
-
-    #resultado-pesquisa {
-        background-color: #f8f9fa;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }   
-
-    .resultado-item {
-        padding: 5px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .resultado-item:last-child {
-        border-bottom: none;
-    }
     </style>
 </head>
 
@@ -154,7 +138,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="sub-main/catalog.html">Catálogo</a>
@@ -165,19 +149,21 @@
                                     Extras
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" target="_blank"
+                                    <li><a class="dropdown-item"
                                             href="#">Jenius Quiz</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Sobre</a></li>
+                                    <li><a class="dropdown-item" href="about.html">Sobre</a></li>
                                 </ul>
                             </li>
                         </ul>
+                        <div class="mx-auto" style="width: 400px;">
+                            <div id="resultado-pesquisa"></div>
+                        </div>
                         <form class="d-flex" role="search" id="pesquisar">
                             <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-                            <div id="resultado-pesquisa" class="mt-3"></div>
+                            <button class="btn btn-outline-success" type="submit">Pesquisar</button>                            
                         </form>
                     </div>
                 </div>
@@ -276,11 +262,11 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" target="_blank"
-                                            href="https://jenius-quiz.vercel.app">Jenius Quiz</a></li>
+                                            href="#">Jenius Quiz</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Sobre</a></li>
+                                    <li><a class="dropdown-item" href="about.html">Sobre</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -291,10 +277,29 @@
                     </div>
                 </div>
             </nav>
+            <main>
+                <div style="margin-left: 75px; margin-top: 56px;">
+                    <div class="mt-5" style="text-indent: 10px;">
+                        <h1>O que é Jenius Quiz?</h1>
+                        <br>
+                        <p>Jenius Quiz é um jogo de quiz com 4 respostas e 50 perguntas, a cada pergunta a difilculdade das perguntas podem aumentar e caso você aperte a resposta errada você terá que refazer tudo denovo!.</p>
+                        <h1>Curiosidades</h1>
+                        <br>
+                        <p>Jogo desenvolvido pela <strong>@newtralstudios</strong> e lançado inicialmente em 05 de setembro de 2024 a fins de entretenimento e experiência!.</p>
+                        <br>
+                    </div>
+                    <section class="shadow-lg mx-auto border border-1 border-light mt-2 bg-light" style="width: 400px; height: 810px;">
+                        <a id="fullscreen-button" style="cursor: pointer;" onclick="toggleIframeFullscreen()">
+                            <box-icon name='fullscreen'></box-icon>
+                        </a>
+                        <iframe id="gameFrame" src="https://jenius-quiz.vercel.app" width="400" height="800" frameborder="0"></iframe>
+                    </section>             
+                </div>
+            </main>
         </main>
     </div>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="teste.js"></script>
+    <script src="jeniusquiz.js"></script>
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script>
 
@@ -358,58 +363,6 @@ function setActiveSidebarLink() {
         localStorage.setItem('selectedGame', gameId);
         window.location.href = 'sub-main/templates/template.html';
     }
-
-    document.getElementById("pesquisar").addEventListener("submit", function(event) {
-    event.preventDefault(); // Previne o reload da página ao submeter o formulário
-
-    const termoPesquisa = document.querySelector("#pesquisar input[type='search']").value.toLowerCase();
-    const jogos = document.querySelectorAll(".card");
-    const resultadoContainer = document.getElementById("resultado-pesquisa");
-
-    // Limpa o conteúdo anterior do resultado da pesquisa
-    resultadoContainer.innerHTML = "";
-
-    let encontrouResultado = false; // Variável para indicar se um jogo foi encontrado
-
-    jogos.forEach(jogo => {
-        if (encontrouResultado) return; // Interrompe a busca após encontrar o primeiro resultado
-
-        const tituloJogo = jogo.querySelector(".card-title").textContent.toLowerCase();
-
-        if (tituloJogo.includes(termoPesquisa)) {
-            // Cria um elemento de resultado com imagem e nome do jogo
-            const jogoResultado = document.createElement("div");
-            jogoResultado.classList.add("resultado-item");
-            jogoResultado.style.display = "flex";
-            jogoResultado.style.alignItems = "center";
-            jogoResultado.style.marginBottom = "10px";
-
-            // Imagem do jogo
-            const imagemJogo = jogo.querySelector("img").cloneNode(true);
-            imagemJogo.style.width = "50px";
-            imagemJogo.style.height = "50px";
-            imagemJogo.style.marginRight = "10px";
-            jogoResultado.appendChild(imagemJogo);
-
-            // Nome do jogo
-            const nomeJogo = document.createElement("span");
-            nomeJogo.textContent = jogo.querySelector(".card-title").textContent;
-            jogoResultado.appendChild(nomeJogo);
-
-            // Adiciona o resultado ao contêiner de resultados
-            resultadoContainer.appendChild(jogoResultado);
-
-            encontrouResultado = true; // Define como verdadeiro para indicar que um resultado foi encontrado
-        }
-    });
-
-    // Exibe mensagem se nenhum jogo for encontrado
-    if (!encontrouResultado) {
-        resultadoContainer.innerHTML = "<p>Nenhum jogo encontrado.</p>";
-    }
-});
-
-
     </script>
 </body>
 

@@ -53,24 +53,6 @@
     .nav-link.active {
         color: white !important;
     }
-
-    #resultado-pesquisa {
-        background-color: #f8f9fa;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }   
-
-    .resultado-item {
-        padding: 5px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .resultado-item:last-child {
-        border-bottom: none;
-    }
-
-
     </style>
 </head>
 
@@ -166,19 +148,21 @@
                                     Extras
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" target="_blank"
+                                    <li><a class="dropdown-item"
                                             href="jeniusquiz.html">Jenius Quiz</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Sobre</a></li>
+                                    <li><a class="dropdown-item" href="about.html">Sobre</a></li>
                                 </ul>
                             </li>
                         </ul>
+                        <div class="mx-auto" style="width: 400px;">
+                            <div id="resultado-pesquisa"></div>
+                        </div>
                         <form class="d-flex" role="search" id="pesquisar">
                             <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-                            <div id="resultado-pesquisa" class="mt-3"></div>
                         </form>
                     </div>
                 </div>
@@ -589,7 +573,7 @@
     </div>
     <div id="site-mobile">
         <main>
-            <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary border border-light shadow-lg bg fixado" style="width: 4.5rem;">
+            <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary border border-light shadow-lg bg fixado mt-5" style="width: 4.5rem;">
                 <a href="#" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
                     <img src="../assets/logo_site.png" class="bi pe-none" width="40" height="32">
                 </a>
@@ -637,7 +621,7 @@
                     </ul>
                 </div>
             </div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg fixado" style="margin-left: 70px; width: 25vh;">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg fixado">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Navegar</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -664,7 +648,7 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Sobre</a></li>
+                                    <li><a class="dropdown-item" href="about.html">Sobre</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -1076,6 +1060,7 @@
         </main>
     </div>
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/register.js"></script>
     <script>
 
     const profileImage = localStorage.getItem('profileImage');
@@ -1088,7 +1073,6 @@
     if (username) {
         document.querySelector('.dropdown-toggle').innerHTML = `<img src="${profileImage || '../assets/user_logo.png'}" class="bi pe-none me-2" width="32" height="32"> ${username}`;
     }
-
 
     document.addEventListener("DOMContentLoaded", function () {
     const sidebarLinks = document.querySelectorAll(".sidebar-link");
@@ -1140,56 +1124,85 @@ function setActiveSidebarLink() {
     }
 
     document.getElementById("pesquisar").addEventListener("submit", function(event) {
-    event.preventDefault(); // Previne o reload da página ao submeter o formulário
+    event.preventDefault();
 
     const termoPesquisa = document.querySelector("#pesquisar input[type='search']").value.toLowerCase();
     const jogos = document.querySelectorAll(".card");
     const resultadoContainer = document.getElementById("resultado-pesquisa");
 
-    // Limpa o conteúdo anterior do resultado da pesquisa
     resultadoContainer.innerHTML = "";
 
-    let encontrouResultado = false; // Variável para indicar se um jogo foi encontrado
+    let encontrouResultado = false;
+    let jogoExibido = null;
 
     jogos.forEach(jogo => {
-        if (encontrouResultado) return; // Interrompe a busca após encontrar o primeiro resultado
+        if (encontrouResultado) return;
 
         const tituloJogo = jogo.querySelector(".card-title").textContent.toLowerCase();
 
         if (tituloJogo.includes(termoPesquisa)) {
-            // Cria um elemento de resultado com imagem e nome do jogo
             const jogoResultado = document.createElement("div");
             jogoResultado.classList.add("resultado-item");
             jogoResultado.style.display = "flex";
             jogoResultado.style.alignItems = "center";
-            jogoResultado.style.marginBottom = "10px";
+            jogoResultado.style.cursor = "pointer";
+            jogoResultado.style.color = 'black'
 
-            // Imagem do jogo
             const imagemJogo = jogo.querySelector("img").cloneNode(true);
             imagemJogo.style.width = "50px";
             imagemJogo.style.height = "50px";
             imagemJogo.style.marginRight = "10px";
             jogoResultado.appendChild(imagemJogo);
 
-            // Nome do jogo
             const nomeJogo = document.createElement("span");
             nomeJogo.textContent = jogo.querySelector(".card-title").textContent;
             jogoResultado.appendChild(nomeJogo);
 
-            // Adiciona o resultado ao contêiner de resultados
             resultadoContainer.appendChild(jogoResultado);
 
-            encontrouResultado = true; // Define como verdadeiro para indicar que um resultado foi encontrado
+            jogoResultado.addEventListener("mouseover", () => {
+                if (jogoExibido === null) {
+                    const copiaJogo = jogo.cloneNode(true);
+                    copiaJogo.style.position = "absolute";
+                    copiaJogo.style.zIndex = "1000";
+                    copiaJogo.style.top = "60px";
+                    copiaJogo.style.left = "50%";
+                    copiaJogo.style.transform = "translateX(-50%)";
+                    copiaJogo.style.width = "300px";
+                    resultadoContainer.appendChild(copiaJogo);
+
+                    jogoExibido = copiaJogo;
+
+                    setTimeout(() => {
+                        removerJogoExibido();
+                        resultadoContainer.innerHTML = ""; 
+                    }, 15000);
+                }
+            });
+
+            encontrouResultado = true;
         }
     });
 
-    // Exibe mensagem se nenhum jogo for encontrado
     if (!encontrouResultado) {
         resultadoContainer.innerHTML = "<p>Nenhum jogo encontrado.</p>";
+        resultadoContainer.style.color = 'black'
     }
+
+    function removerJogoExibido() {
+        if (jogoExibido !== null) {
+            resultadoContainer.removeChild(jogoExibido);
+            jogoExibido = null;
+        }
+    }
+
+    document.addEventListener("click", function(event) {
+        if (jogoExibido !== null && !resultadoContainer.contains(event.target) && !jogoExibido.contains(event.target)) {
+            removerJogoExibido();
+            resultadoContainer.innerHTML = "";
+        }
+    });
 });
-
-
     </script>
 </body>
 

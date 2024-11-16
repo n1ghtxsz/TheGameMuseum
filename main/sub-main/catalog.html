@@ -7,58 +7,58 @@
     <link rel="stylesheet" href="../../bootstrap-5.3.3-dist/css/bootstrap.css">
     <link rel="icon" type="x/icon" href="../../assets/logo_site.png">
     <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/responsive.css">
     <title>The Game Museum</title>
     <style>
-    body {
-       overflow-x: hidden;
-    }
+        body {
+            overflow-x: hidden;
+        }
 
-    .fixado {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: #333;
-        color: white;
+        .fixado {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
 
-        z-index: 1000;
-    }
+            z-index: 1000;
+        }
 
-    .card {
-        position: relative;
-        overflow: hidden;
-    }
+        .card {
+            position: relative;
+            overflow: hidden;
+        }
 
-    .card:hover {
-        background-color: rgb(82, 78, 78);
-        cursor: pointer;
-    }
+        .card:hover {
+            background-color: rgb(82, 78, 78);
+            cursor: pointer;
+        }
 
-    .card-body h5 {
-        color: black;
-        transition: color 0.3s ease;
-    }
+        .card-body h5 {
+            color: black;
+            transition: color 0.3s ease;
+        }
 
-    .card:hover .card-body h5 {
-        color: white;
-    }
+        .card:hover .card-body h5 {
+            color: white;
+        }
 
-    .card img {
-        transition: opacity 0.3s ease;
-    }   
+        .card img {
+            transition: opacity 0.3s ease;
+        }
 
-    .card:hover img {
-        opacity: 0.6;
-    }
+        .card:hover img {
+            opacity: 0.6;
+        }
 
-    .nav-link.active {
-        color: white !important;
-    }
-
+        .nav-link.active {
+            color: white !important;
+        }
     </style>
 </head>
 
 <body>
-    <div>
+    <div id="site-pc">
         <div id="navigation_container" class="d-block">
             <div id="sidebar" class="border border-light shadow-lg bg fixado"
                 style="width: 290px; height: 961px; background-color: #fff;">
@@ -73,23 +73,25 @@
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto" id="sidebar-menu">
                         <li class="nav-item">
-                            <a class="nav-link link-body-emphasis active" aria-current="page" href="#popular"><img src="../../assets/golden_star.png"
-                                    class="bi pe-none me-2" width="16" height="16">
+                            <a class="nav-link link-body-emphasis active" aria-current="page" href="#popular"><img
+                                    src="../../assets/golden_star.png" class="bi pe-none me-2" width="16" height="16">
                                 </img> POPULAR</a>
                         </li>
                         <li>
-                            <a class="nav-link link-body-emphasis" href="#indie"><img src="../../assets/hollowknight_head.png"
-                                    class="bi pe-none me-2" width="16" height="16">
+                            <a class="nav-link link-body-emphasis" href="#indie"><img
+                                    src="../../assets/hollowknight_head.png" class="bi pe-none me-2" width="16"
+                                    height="16">
                                 </img> INDIE</a>
                         </li>
                         <li>
-                            <a class="nav-link link-body-emphasis" href="#retro"><img src="../../assets/play2_controller.png"
-                                    class="bi pe-none me-2" width="16" height="16">
+                            <a class="nav-link link-body-emphasis" href="#retro"><img
+                                    src="../../assets/play2_controller.png" class="bi pe-none me-2" width="16"
+                                    height="16">
                                 </img> RETRO</a>
                         </li>
                         <li>
-                            <a class="nav-link link-body-emphasis" href="#gratuitos"><img src="../../assets/coin_games.png"
-                                    class="bi pe-none me-2" width="16" height="16">
+                            <a class="nav-link link-body-emphasis" href="#gratuitos"><img
+                                    src="../../assets/coin_games.png" class="bi pe-none me-2" width="16" height="16">
                                 </img> GRATUITOS</a>
                         </li>
                         <li>
@@ -99,11 +101,16 @@
                         </li>
                     </ul>
                     <div class="grid gap-3">
-                        <a href="https://bsky.app/profile/nightxsz.bsky.social" target="_blank"><img class="p-1 animationsocial" src="../../assets/blueskylogo.png" width="44"></a>
-                        <a href="https://www.instagram.com/siqueira.luisf/" target="_blank"><img class="p-1 animationsocial" src="../../assets/instagramlogo.png" width="44"></a>
-                        <a href="https://github.com/n1ghtxsz" target="_blank"><img class="p-1 animationsocial" src="../../assets/githublogo.png" width="44"></a>
-                        <a href="https://www.twitch.tv/nightxsz" target="_blank"><img class="p-1 animationsocial" src="../../assets/twitch.png" width="44"></a>
-                        <a href="https://www.x.com/LOWER_nightxsz" target="_blank"><img class="p-1 animationsocial" src="../../assets/twitter.png" width="44"></a>
+                        <a href="https://bsky.app/profile/nightxsz.bsky.social" target="_blank"><img
+                                class="p-1 animationsocial" src="../../assets/blueskylogo.png" width="44"></a>
+                        <a href="https://www.instagram.com/siqueira.luisf/" target="_blank"><img
+                                class="p-1 animationsocial" src="../../assets/instagramlogo.png" width="44"></a>
+                        <a href="https://github.com/n1ghtxsz" target="_blank"><img class="p-1 animationsocial"
+                                src="../../assets/githublogo.png" width="44"></a>
+                        <a href="https://www.twitch.tv/nightxsz" target="_blank"><img class="p-1 animationsocial"
+                                src="../../assets/twitch.png" width="44"></a>
+                        <a href="https://www.x.com/LOWER_nightxsz" target="_blank"><img class="p-1 animationsocial"
+                                src="../../assets/twitter.png" width="44"></a>
                     </div>
                     <hr>
                     <div class="dropdown">
@@ -127,7 +134,8 @@
                     </div>
                 </div>
             </div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg fixado" style="margin-left: 290px; width: 164vh;">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg fixado"
+                style="margin-left: 290px; width: 164vh;">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Navegar</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -149,19 +157,18 @@
                                     Extras
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" target="_blank"
-                                            href="../jeniusquiz.html">Jenius Quiz</a></li>
+                                    <li><a class="dropdown-item" href="../jeniusquiz.html">Jenius Quiz</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Sobre</a></li>
+                                    <li><a class="dropdown-item" href="../about.html">Sobre</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li>
                         </ul>
-                        <form class="d-flex" role="search">
+                        <div class="mx-auto" style="width: 400px;">
+                            <div id="resultado-pesquisa"></div>
+                        </div>
+                        <form class="d-flex" role="search" id="pesquisar">
                             <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                         </form>
@@ -169,9 +176,12 @@
                 </div>
             </nav>
             <main class="row">
-                <h1 class="text-center" style="margin-left: 60px; margin-top: 75px; text-indent: 150px; width: 189vh;">Catálogo</h1>
-                <h1 id="popular" class="text-start fs-2 shadow bg-primary text-light border border-light" style="margin-left: 290px; margin-top: 25px; text-indent: 100px; width: 165vh;">Jogos Populares</h1>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <h1 class="text-center" style="margin-left: 60px; margin-top: 75px; text-indent: 150px; width: 189vh;">
+                    Catálogo</h1>
+                <h1 id="popular" class="text-start fs-2 shadow bg-primary text-light border border-light"
+                    style="margin-left: 290px; margin-top: 25px; text-indent: 100px; width: 165vh;">Jogos Populares</h1>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/eldenring.jpg" class="card-img-top">
                         <div class="card-body">
@@ -197,7 +207,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/dragonballzsparkingzero.jpg" class="card-img-top">
                         <div class="card-body">
@@ -223,7 +234,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/liarbar.jpg" class="card-img-top">
                         <div class="card-body">
@@ -249,8 +261,10 @@
                         </div>
                     </div>
                 </div>
-                <h1 id="indie" class="text-start fs-2 shadow bg-primary text-light border border-light" style="margin-left: 290px; text-indent: 100px; margin-top: 100px; width: 165vh;">Jogos Indie</h1>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <h1 id="indie" class="text-start fs-2 shadow bg-primary text-light border border-light"
+                    style="margin-left: 290px; text-indent: 100px; margin-top: 100px; width: 165vh;">Jogos Indie</h1>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/hollowknight.jpg" class="card-img-top">
                         <div class="card-body">
@@ -276,7 +290,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/hades.jpg" class="card-img-top">
                         <div class="card-body">
@@ -302,7 +317,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/limbo.jpg" class="card-img-top">
                         <div class="card-body">
@@ -328,8 +344,10 @@
                         </div>
                     </div>
                 </div>
-                <h1 id="retro" class="text-start fs-2 shadow bg-primary text-light border border-light" style="margin-left: 290px; text-indent: 100px; margin-top: 100px; width: 165vh;">Jogos Retro</h1>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <h1 id="retro" class="text-start fs-2 shadow bg-primary text-light border border-light"
+                    style="margin-left: 290px; text-indent: 100px; margin-top: 100px; width: 165vh;">Jogos Retro</h1>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/halflife.jpg" class="card-img-top">
                         <div class="card-body">
@@ -355,7 +373,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/castlevania.jpg" class="card-img-top">
                         <div class="card-body">
@@ -381,7 +400,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/supermetroid.jpg" class="card-img-top">
                         <div class="card-body">
@@ -407,8 +427,11 @@
                         </div>
                     </div>
                 </div>
-                <h1 id="gratuitos" class="text-start fs-2 shadow bg-primary text-light border border-light" style="margin-left: 290px; text-indent: 100px; margin-top: 100px; width: 165vh;">Jogos Gratuitos</h1>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <h1 id="gratuitos" class="text-start fs-2 shadow bg-primary text-light border border-light"
+                    style="margin-left: 290px; text-indent: 100px; margin-top: 100px; width: 165vh;">Jogos Gratuitos
+                </h1>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/muck.jpg" class="card-img-top">
                         <div class="card-body">
@@ -434,7 +457,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/oncehuman.jpg" class="card-img-top">
                         <div class="card-body">
@@ -460,7 +484,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/microworks.jpg" class="card-img-top">
                         <div class="card-body">
@@ -486,8 +511,11 @@
                         </div>
                     </div>
                 </div>
-                <h1 id="terror" class="text-start fs-2 shadow bg-primary text-light border border-light" style="margin-left: 290px; text-indent: 100px; margin-top: 100px; width: 165vh;">Jogos de Terror</h1>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <h1 id="terror" class="text-start fs-2 shadow bg-primary text-light border border-light"
+                    style="margin-left: 290px; text-indent: 100px; margin-top: 100px; width: 165vh;">Jogos de Terror
+                </h1>
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/deadbydaylight.jpg" class="card-img-top">
                         <div class="card-body">
@@ -513,7 +541,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/residentevilvillage.jpg" class="card-img-top">
                         <div class="card-body">
@@ -539,7 +568,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around" style="margin-left: 305px; width: 163vh;">
+                <div class="d-flex mt-5 col-md-4 col-sm-6 col-lg-3 justify-content-around"
+                    style="margin-left: 305px; width: 163vh;">
                     <div class="card shadow-sm m-2 animationsocial" style="width: 18rem;">
                         <img src="../../assets/alienisolation.jpg" class="card-img-top">
                         <div class="card-body">
@@ -568,70 +598,650 @@
             </main>
         </div>
     </div>
+    <div id="site-mobile">
+        <div id="navigation_container">
+            <div id="sidebar">
+                <div id="container" class="d-flex flex-column flex-shrink-0 bg-body-tertiary border border-light shadow-lg bg fixado mt-5" style="width: 4.5rem;">
+                    <a href="#" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip"
+                        data-bs-placement="right" data-bs-original-title="Icon-only">
+                        <img src="../../assets/logo_site.png" class="bi pe-none" width="40" height="32">
+                    </a>
+                    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center" id="sidebar-menu">
+                        <li class="nav-item">
+                            <a href="#popular" class="nav-link link-body-emphasis active py-3 border-bottom rounded-0 sidebar-link" aria-current="page">
+                                <img src="../../assets/golden_star.png" class="bi pe-none" width="24" height="24">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#indie" class="nav-link link-body-emphasis py-3 border-bottom rounded-0 sidebar-link">
+                                <img src="../../assets/hollowknight_head.png" class="bi pe-none" width="24" height="24">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#retro" class="nav-link link-body-emphasis py-3 border-bottom rounded-0 sidebar-link">
+                                <img src="../../assets/play2_controller.png" class="bi pe-none" width="24" height="24">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#gratuitos" class="nav-link link-body-emphasis py-3 border-bottom rounded-0 sidebar-link">
+                                <img src="../../assets/coin_games.png" class="bi pe-none" width="24" height="24">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#terror" class="nav-link py-3 link-body-emphasis border-bottom rounded-0 sidebar-link">
+                                <img src="../../assets/cute_ghost.png" class="bi pe-none" width="24" height="24">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="dropdown border-top">
+                        <a href="#"
+                            class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../../assets/user_logo.png" alt="mdo" width="24" height="24"
+                                class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small shadow">
+                            <li>
+                                <a href="config.html" class="dropdown-item">Configurações</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a href="../login/login.html" class="dropdown-item">Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg fixado">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navegar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalog.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Extras
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../jeniusquiz.html">Jenius Quiz</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="../about.html">Sobre</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <main class="row">
+            <h1 class="text-center mx-auto" style="margin-top: 75px; width: 189vh;">Catálogo</h1>
+            <h1 id="popular" class="text-center fs-2 shadow bg-primary text-light border border-light section"
+                style="margin-top: 75px;">Jogos Populares</h1>
+            <div class="mt-5 p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/eldenring.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Elden Ring</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('eldenring')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/blackmythwukong.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Black Myth Wukong</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('blackmythwukong')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../../assets/gta5.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Grand Thief Auto V</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('gta5')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/dragonballzsparkingzero.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">DBZ: Sparkin Zero</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('dbzsparkinzero')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/dayz.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">DayZ</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('dayz')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/lethalcompany.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Lethal Company</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('lethalcompany')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/liarbar.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Liar's Bar</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('liarbar')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/godofwarragnarok.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">God Of War Ragnarok</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('godofwarragnarok')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/thelastofus.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">The Last Of Us</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('thelastofus')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <h1 id="indie" class="text-center fs-2 shadow bg-primary text-light border border-light section">Jogos Indie
+            </h1>
+            <div class="mt-5 p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/hollowknight.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Hollow Knight</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('hollowknight')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/celeste.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Celeste</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('celeste')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/undertale.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Undertale</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('undertale')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/hades.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Hades</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('hades')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/stardewvalley.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Stardew Valley</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('stardewvalley')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/nightinthewoods.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Night in the woods</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('nightinthewoods')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/limbo.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Limbo</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('limbo')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/inside.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Inside</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('inside')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/shovelknight.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Shovel Knight</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('shovelknight')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <h1 id="retro" class="text-center fs-2 shadow bg-primary text-light border border-light section">Jogos Retro
+            </h1>
+            <div class="mt-5 p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/halflife.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Half Life</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('halflife')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/punchout.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Punch Out</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('punchout')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/donkeykongcountry.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Donkey Kong Country</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('donkeykong')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/castlevania.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Castlevania Symphony Of The Night</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('castlevania')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/finalfantasyvii.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Final fantasy VII</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('finalfantasyvii')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/monkeyisland.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Monkey Island</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('monkeyisland')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/supermetroid.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Super Metroid</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('supermetroid')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/megamanx.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Mega Man X</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('megamanx')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/streetfighter.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Street Fighter II</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('streetfighter')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <h1 id="gratuitos" class="text-center fs-2 shadow bg-primary text-light border border-light section">Jogos
+                Gratuitos</h1>
+            <div class="mt-5 p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/muck.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Muck</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('muck')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/warframe.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Warframe</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('warframe')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/valorant.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Valorant</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('valorant')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/oncehuman.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Once Human</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('oncehuman')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/fnafpizzeriasimulator.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Freddy Fazbear's Pizzeria Simulator</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('fnafpizzeriasimulator')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/crabgame.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Crab Game</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('crabgame')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/microworks.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Micro Works</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('microworks')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/sneakout.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneak Out</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('sneakout')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/pubg.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">PUBG: BATTLEGROUNDS</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('pubg')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <h1 id="terror" class="text-center fs-2 shadow bg-primary text-light border border-light section">Jogos de
+                Terror</h1>
+            <div class="mt-5 p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/deadbydaylight.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Dead By Daylight</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('deadbydaylight')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/themortuaryassistant.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">The Mortuary Assistant</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('themortuaryassistant')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/outlast.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Outlast</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('outlast')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/residentevilvillage.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Resident Evil Village</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('residentevil')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/panicore.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Panicore</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('panicore')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/feartherapy.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Fear Therapy</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('feartherapy')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3" style="width: 163vh;">
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/alienisolation.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Alien: Isolation</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('alien')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/bendy.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Bendy and the Ink Machine</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('bendy')">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="card shadow-sm m-2 animationsocial mx-auto" style="width: 18rem;">
+                    <img src="../../assets/scplabrat.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">SCP: Labrat</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-primary" onclick="selectGame('scplabrat')">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
     <script src="../../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script>
 
-    const profileImage = localStorage.getItem('profileImage');
-    const username = localStorage.getItem('username');
+        const profileImage = localStorage.getItem('profileImage');
+        const username = localStorage.getItem('username');
 
-    if (profileImage) {
-        document.querySelector('.dropdown img').src = profileImage;
-    }
+        if (profileImage) {
+            document.querySelector('.dropdown img').src = profileImage;
+        }
 
-    if (username) {
-        document.querySelector('.dropdown-toggle').innerHTML = `<img src="${profileImage || '../assets/user_logo.png'}" class="bi pe-none me-2" width="32" height="32"> ${username}`;
-    }
+        if (username) {
+            document.querySelector('.dropdown-toggle').innerHTML = `<img src="${profileImage || '../assets/user_logo.png'}" class="bi pe-none me-2" width="32" height="32"> ${username}`;
+        }
 
-    document.addEventListener("DOMContentLoaded", function () {
-    const sidebarLinks = document.querySelectorAll(".sidebar-link");
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebarLinks = document.querySelectorAll(".sidebar-link");
 
-    sidebarLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
+            sidebarLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
 
-            const sectionId = this.getAttribute("href");
-            const section = document.querySelector(sectionId);
+                    const sectionId = this.getAttribute("href");
+                    const section = document.querySelector(sectionId);
 
-            section.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
+                    section.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
                 });
             });
         });
-    });
 
-    document.querySelectorAll('#sidebar-menu .nav-link').forEach(item => {
-    item.addEventListener('click', function() {
-        document.querySelectorAll('#sidebar-menu .nav-link').forEach(link => {
-            link.classList.remove('active');
+        document.querySelectorAll('#sidebar-menu .nav-link').forEach(item => {
+            item.addEventListener('click', function () {
+                document.querySelectorAll('#sidebar-menu .nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
         });
-        this.classList.add('active');
-    });
-});
 
-function setActiveSidebarLink() {
-    const hash = window.location.hash;
-    const sidebarLinks = document.querySelectorAll('#sidebar-menu .nav-link');
+        function setActiveSidebarLink() {
+            const hash = window.location.hash;
+            const sidebarLinks = document.querySelectorAll('#sidebar-menu .nav-link');
 
-    if (!hash) {
-        sidebarLinks[0].classList.add('active');
-    }
+            if (!hash) {
+                sidebarLinks[0].classList.add('active');
+            }
 
-    sidebarLinks.forEach(link => {
-        if (link.getAttribute('href') === hash) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
+            sidebarLinks.forEach(link => {
+                if (link.getAttribute('href') === hash) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
         }
-    });
-}
 
-function selectGame(gameId) {
-        // Salva o ID do jogo selecionado no localStorage
-        localStorage.setItem('selectedGame', gameId);
-        // Redireciona para a página de template
-        window.location.href = 'templates/template.html';
-    }
+        function selectGame(gameId) {
+            // Salva o ID do jogo selecionado no localStorage
+            localStorage.setItem('selectedGame', gameId);
+            // Redireciona para a página de template
+            window.location.href = 'templates/template.html';
+        }
+
+        document.getElementById("pesquisar").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const termoPesquisa = document.querySelector("#pesquisar input[type='search']").value.toLowerCase();
+            const jogos = document.querySelectorAll(".card");
+            const resultadoContainer = document.getElementById("resultado-pesquisa");
+
+            resultadoContainer.innerHTML = "";
+
+            let encontrouResultado = false;
+            let jogoExibido = null;
+
+            jogos.forEach(jogo => {
+                if (encontrouResultado) return;
+
+                const tituloJogo = jogo.querySelector(".card-title").textContent.toLowerCase();
+
+                if (tituloJogo.includes(termoPesquisa)) {
+                    const jogoResultado = document.createElement("div");
+                    jogoResultado.classList.add("resultado-item");
+                    jogoResultado.style.display = "flex";
+                    jogoResultado.style.alignItems = "center";
+                    jogoResultado.style.cursor = "pointer";
+                    jogoResultado.style.color = 'black'
+
+                    const imagemJogo = jogo.querySelector("img").cloneNode(true);
+                    imagemJogo.style.width = "50px";
+                    imagemJogo.style.height = "50px";
+                    imagemJogo.style.marginRight = "10px";
+                    jogoResultado.appendChild(imagemJogo);
+
+                    const nomeJogo = document.createElement("span");
+                    nomeJogo.textContent = jogo.querySelector(".card-title").textContent;
+                    jogoResultado.appendChild(nomeJogo);
+
+                    resultadoContainer.appendChild(jogoResultado);
+
+                    jogoResultado.addEventListener("mouseover", () => {
+                        if (jogoExibido === null) {
+                            const copiaJogo = jogo.cloneNode(true);
+                            copiaJogo.style.position = "absolute";
+                            copiaJogo.style.zIndex = "1000";
+                            copiaJogo.style.top = "60px";
+                            copiaJogo.style.left = "50%";
+                            copiaJogo.style.transform = "translateX(-50%)";
+                            copiaJogo.style.width = "300px";
+                            resultadoContainer.appendChild(copiaJogo);
+
+                            jogoExibido = copiaJogo;
+
+                            setTimeout(() => {
+                                removerJogoExibido();
+                                resultadoContainer.innerHTML = "";
+                            }, 15000);
+                        }
+                    });
+
+                    encontrouResultado = true;
+                }
+            });
+
+            if (!encontrouResultado) {
+                resultadoContainer.innerHTML = "<p>Nenhum jogo encontrado.</p>";
+                resultadoContainer.style.color = 'black'
+            }
+
+            function removerJogoExibido() {
+                if (jogoExibido !== null) {
+                    resultadoContainer.removeChild(jogoExibido);
+                    jogoExibido = null;
+                }
+            }
+
+            document.addEventListener("click", function (event) {
+                if (jogoExibido !== null && !resultadoContainer.contains(event.target) && !jogoExibido.contains(event.target)) {
+                    removerJogoExibido();
+                    resultadoContainer.innerHTML = "";
+                }
+            });
+        });
+
 
 
     </script>
